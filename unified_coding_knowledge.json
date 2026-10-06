@@ -1,0 +1,135 @@
+{
+  "developer_profile": {
+    "developer_level": "beginner-to-intermediate web developer with solid practical React/Next.js fundamentals and growing full-stack experience",
+    "strong_knowledge": [
+      "React functional components",
+      "component props and composition",
+      "useState",
+      "useContext",
+      "Context-based shared state",
+      "TypeScript interfaces",
+      "typed component props",
+      "typed data models",
+      "async/await",
+      "fetch and JSON APIs",
+      "map",
+      "filter",
+      "some",
+      "conditional rendering",
+      "event handlers",
+      "reusable UI components",
+      "Tailwind CSS",
+      "DaisyUI",
+      "responsive Tailwind layouts",
+      "Next.js App Router fundamentals",
+      "dynamic routes",
+      "Next.js Link and Image",
+      "layout.tsx",
+      "loading.tsx",
+      "not-found.tsx"
+    ],
+    "moderate_knowledge": [
+      "Next.js server-side and async data fetching",
+      "local UI state patterns",
+      "FormData",
+      "authentication flows",
+      "session handling",
+      "profile and update flows",
+      "usePathname",
+      "sorting and filtering application data",
+      "feature-oriented component organization",
+      "reusable button, badge and card components",
+      "environment-based API URLs"
+    ],
+    "limited_evidence": [
+      "advanced TypeScript",
+      "complex generics",
+      "utility types",
+      "conditional and mapped types",
+      "Redux or Redux Toolkit",
+      "Zustand",
+      "useReducer",
+      "state machines",
+      "TanStack Query",
+      "SWR",
+      "Apollo",
+      "advanced backend architecture",
+      "advanced MongoDB architecture",
+      "advanced performance optimization",
+      "testing frameworks",
+      "advanced Next.js architecture",
+      "advanced caching strategies",
+      "complex design patterns"
+    ],
+    "preferred_patterns": [
+      "functional React components",
+      "useState for local UI state",
+      "Context with useState for appropriate shared state",
+      "TypeScript interfaces for props and data models",
+      "fetch with async/await",
+      "map, filter and some for straightforward collection logic",
+      "reusable components when UI is genuinely repeated",
+      "feature-based component folders",
+      "Tailwind CSS",
+      "DaisyUI when already used",
+      "responsive Tailwind utilities",
+      "existing project conventions",
+      "clear action-oriented handler names",
+      "simple data-transform-render flows"
+    ],
+    "avoid_unnecessary_patterns": [
+      "Redux or Zustand for simple shared state",
+      "complex custom state-management architecture",
+      "TanStack Query or SWR for straightforward fetch requirements",
+      "excessive custom hooks",
+      "generic abstractions used only once",
+      "repository, service or factory patterns for small applications without a real need",
+      "excessive component splitting",
+      "advanced TypeScript when simple interfaces are sufficient",
+      "complex functional programming patterns",
+      "new styling systems when Tailwind or DaisyUI already works",
+      "unnecessary architecture rewrites",
+      "best-practice refactors that make familiar code harder to understand"
+    ]
+  },
+  "reference_projects": {
+    "project_count": 4,
+    "strong_patterns": [
+      {
+        "pattern": "Tailwind/utility classes",
+        "file_count": 51
+      },
+      {
+        "pattern": "TypeScript interface",
+        "file_count": 26
+      },
+      {
+        "pattern": "map",
+        "file_count": 19
+      },
+      {
+        "pattern": "async/await",
+        "file_count": 16
+      },
+      {
+        "pattern": "fetch",
+        "file_count": 12
+      },
+      {
+        "pattern": "useContext",
+        "file_count": 9
+      },
+      {
+        "pattern": "useState",
+        "file_count": 7
+      }
+    ]
+  },
+  "current_project": {
+    "files_analyzed": 2,
+    "patterns": {
+      "Tailwind/utility classes": 2
+    }
+  },
+  "reasoning_examples": 2
+}

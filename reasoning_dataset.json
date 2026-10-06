@@ -1,0 +1,808 @@
+{
+  "projects": [
+    "b14-book-vibe",
+    "bangla-news-24",
+    "Dev-Stack",
+    "Fitlog"
+  ],
+  "patterns": {
+    "useContext": {
+      "file_count": 9,
+      "projects": [
+        "b14-book-vibe",
+        "Fitlog"
+      ],
+      "examples": [
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\bookDetails\\ReadButton.tsx",
+          "code": "const { readBooks, setReadBooks } = useContext(BooksContext);\nconst handleReadBook = () => {\nconsole.log(\"read book btn triggered\", book);"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\bookDetails\\WishListButton.tsx",
+          "code": "const { wishlist, setWishlist } = useContext(BooksContext);\nconst handleAddToWishlist = () => {\nconsole.log(\"add to wishlist btn triggered\", book);"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\listed-books\\page.tsx",
+          "code": "const { readBooks, wishlist } = useContext(BooksContext);\nconst [sortBy, setSortBy] = useState<\"rating\" | \"pages\" | \"year\">(\"rating\");\n// console.log(readBooks, wishlist, \"readBooks\", \"wishlist\");"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\read-books\\page.tsx",
+          "code": "const { readBooks } = useContext(BooksContext);\nconst data = readBooks.map((book: IBook, index: number) => {\nreturn {"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\myPlan\\PlanWorkoutCard.tsx",
+          "code": "} = useContext(WorkoutContext);\nconst handleMarkAsDone = () => {\nsetPlanWorkouts("
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Navbar.tsx",
+          "code": "const { planWorkouts, savedWorkouts } = useContext(WorkoutContext);\nreturn (\n<div className=\"navbar relative bg-black text-white px-3 md:px-6 shadow-sm border-b border-zinc-800\">\n<div className=\"navbar-start gap-1.5\">"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\workoutDetails\\AddToPlanButton.tsx",
+          "code": "const { planWorkouts, setPlanWorkouts } = useContext(WorkoutContext);\nconst handleAddToPlan = () => {\nconst alreadyAdded = planWorkouts.some(\n(item) => item.id === workout.id"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\workoutDetails\\SaveButton.tsx",
+          "code": "const { savedWorkouts, setSavedWorkouts } = useContext(WorkoutContext);\nconst handleSave = () => {\nconst alreadySaved = savedWorkouts.some(\n(item) => item.id === workout.id"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\my-plan\\page.tsx",
+          "code": "const { planWorkouts } = useContext(WorkoutContext);\nconst { savedWorkouts } = useContext(WorkoutContext);\nconst [activeTab, setActiveTab] = useState(\ntab === \"saved\" ? \"saved\" : \"plan\""
+        }
+      ]
+    },
+    "Tailwind/utility classes": {
+      "file_count": 51,
+      "projects": [
+        "b14-book-vibe",
+        "bangla-news-24",
+        "Dev-Stack",
+        "Fitlog"
+      ],
+      "examples": [
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\bookDetails\\ReadButton.tsx",
+          "code": "<button className=\"btn btn-primary flex-1\" onClick={() => handleReadBook()}>\nRead\n</button>\n);"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\bookDetails\\WishListButton.tsx",
+          "code": "className=\"btn btn-primary flex-1\"\nonClick={() => handleAddToWishlist()}\n>\nAdd to Wishlist"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\homepage\\Banner.tsx",
+          "code": "<section className=\"px-4 py-10 md:py-16\">\n<div className=\"container mx-auto overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700\">\n<div className=\"grid items-center gap-8 p-6 md:grid-cols-2 md:p-10 lg:p-14\">"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\homepage\\Books.tsx",
+          "code": "<section className=\"container mx-auto my-[70px] px-4\">\n{/* Section Heading */}\n<div className=\"mb-10 text-center\">\n<p className=\"mb-2 text-sm font-semibold uppercase tracking-widest text-emerald-500\">"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\shared\\BookCard.tsx",
+          "code": "<div className=\"group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl\">\n{/* Image */}\n<div className=\"relative h-72 overflow-hidden bg-slate-100\">\n<Image"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\shared\\ListedBooksCard.tsx",
+          "code": "<div className=\"group flex flex-col items-center overflow-hidden rounded-2xl border border-base-300 bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:flex-row\">\n{\" \"}\n{/* Book Image */}{\" \"}\n<div className=\"relative h-72 w-full shrink-0 overflow-hidden bg-base-200 sm:h-auto sm:w-[400px]\">"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\shared\\Navbar.tsx",
+          "code": "<nav className=\"bg-base-100 shadow-sm\">\n<div className=\"navbar container mx-auto\">\n<div className=\"navbar-start\">\n<div className=\"dropdown\">"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\books\\page.tsx",
+          "code": "<section className=\"container mx-auto my-[70px] px-4\">\n{/* Section Heading */}\n<div className=\"mb-10 text-center\">\n<p className=\"mb-2 text-sm font-semibold uppercase tracking-widest text-emerald-500\">"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\books\\[id]\\page.tsx",
+          "code": "<div className=\"container mx-auto px-4 py-10\">\n<div className=\"card lg:card-side overflow-hidden border border-base-300 bg-base-100 shadow-xl\">\n{/* Book Image */}\n<figure className=\"relative bg-base-200 lg:w-2/5\">"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\listed-books\\page.tsx",
+          "code": "<div className=\"container mx-auto py-[20px]\">\n<h2 className=\"my-4 bg-amber-100 rounded-3xl py-16 font-bold text-4xl text-center\">\nListed Books\n</h2>"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\read-books\\page.tsx",
+          "code": "<div className=\"container mx-auto my-5 \">\n{readBooks.length > 0 ? (\n<BarChart\nstyle={{"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\layout.tsx",
+          "code": "className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}\n>\n<body className=\"min-h-full flex flex-col\">\n<BooksProvider>"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\Header.tsx",
+          "code": "<header className=\"relative mx-auto max-w-7xl px-4 py-4\">\n<div className=\"flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2\">\n<Image\nsrc=\"/logo.webp\""
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\MainNews.tsx",
+          "code": "<div className=\"flex gap-2\">\n<Link href={`/news/${firstNews.id}`}>\n<div className=\"card bg-base-100 w-96 shadow-sm\">\n<figure>"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\Marquee.tsx",
+          "code": "<div className=\"bg-red-700 text-white\">\n<div className=\"flex max-w-7xl mx-auto\">\n<div className=\"bg-red-800 py-1 px-5 font-bold\">\u09b8\u09b0\u09cd\u09ac\u09b6\u09c7\u09b7</div>"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\MostRead.tsx",
+          "code": "<div className=\"card p-2 bg-base-100 border border-gray-300\">\n<h1 className=\"font-bold text-red-700 mb-3\">\u09b8\u09b0\u09cd\u09ac\u09be\u09a7\u09bf\u0995 \u09aa\u09a0\u09bf\u09a4</h1>\n<div className=\"grid gap-3\">"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\NavLinks.tsx",
+          "code": "<div className=\"flex gap-5 justify-center mt-5\">\n<Link href={\"/\"}>\u09b9\u09cb\u09ae</Link>\n{filteredNavs.map((n, i) => ("
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\NewsCard.tsx",
+          "code": "<div className=\"card bg-base-100  shadow-sm\">\n<figure>\n<Image\nheight={600}"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\UserInfo.tsx",
+          "code": "<div className=\"absolute right-4 top-4 flex items-center gap-3 text-sm\">\n{user ? (\n<div className=\"flex flex-col items-center gap-2\">\n<Link href={\"/profile\"}>"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\page.tsx",
+          "code": "<div className=\"grid gap-5 grid-cols-3  mt-5\">\n{/* news section */}\n<div className=\" col-span-2 \">\n<MainNews news={mainNews} />"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\category\\[categoryId]\\page.tsx",
+          "code": "<h1 className=\"text-2xl font-bold border-b-2 border-red-700 mb-5\">\n{data.title}\n</h1>"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\profile\\page.tsx",
+          "code": "<div className=\"mt-5 \">\n<div className=\"flex flex-col items-center gap-2\">\n<Link href={\"/profile\"}>\n<div className=\"avatar\">"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\signin\\page.tsx",
+          "code": "<div className=\"flex flex-col items-center justify-center mt-5\">\n<h2 className=\"text-2xl font-bold text-red-700\">\u09b8\u09be\u0987\u09a8 \u0987\u09a8</h2>\n<form onSubmit={onSubmit}>\n<fieldset className=\"fieldset   rounded-box w-md\">"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\signup\\page.tsx",
+          "code": "<div className=\"flex flex-col items-center justify-center mt-5\">\n<h2 className=\"text-2xl font-bold text-red-700\">\u09b8\u09be\u0987\u09a8 \u0986\u09aa</h2>\n<form onSubmit={onSubmit}>\n<fieldset className=\"fieldset   rounded-box w-md\">"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\layout.tsx",
+          "code": "className={`${notoSerifBengali.className}  h-full antialiased`}\n>\n<body className=\"min-h-full\">\n<Header/>"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\loading.tsx",
+          "code": "<div className=\"min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-rose-100 to-red-200 px-4\">\n<div className=\"text-center max-w-lg\">\n{/* Animated spinner */}\n<div className=\"relative w-24 h-24 mx-auto mb-8\">"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\not-found.tsx",
+          "code": "<div className=\"min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-rose-100 to-red-200 px-4\">\n<div className=\"text-center max-w-lg\">\n{/* Big 404 with glowing effect */}\n<h1 className=\"text-[10rem] sm:text-[12rem] font-black leading-none bg-gradient-to-b from-red-500 to-red-800 bg-clip-text text-transparent drop-shadow-[0_5px_15px_rgba(220,38,38,0.4)] select-none\">"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\Footer\\Footer.tsx",
+          "code": "<footer className=\"bg-white border-t border-gray-200 mt-15\">\n<div className=\"max-w-7xl mx-auto px-6 py-10\">"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\Hero\\Hero.tsx",
+          "code": "<section className=\"container mx-auto grid md:grid-cols-2 items-center gap-6 px-4 py-10 md:py-16\">\n{/* Left Side */}\n<div className=\"max-w-160 text-center md:text-left\">"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\Navbar\\Navbar.tsx",
+          "code": "<nav className=\"sticky top-0 z-50 border-b border-[#F1F5F9] bg-white\">\n<div className=\"container mx-auto grid grid-cols-3 items-center px-6 py-4\">"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\StackItem.tsx",
+          "code": "<div className=\"flex items-center justify-between gap-3 p-3 rounded-md border border-gray-200 bg-white\">\n<div className=\"flex items-center gap-3\">\n<div className=\"w-10 h-10 rounded-md bg-gray-50 flex items-center justify-center\">"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\TechnologyCard.tsx",
+          "code": "<div className=\"bg-white rounded-xl p-5 shadow-sm border border-gray-100 h-full flex flex-col\">\n<div className=\"relative flex-1 flex flex-col\">"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\TechnologyGrid.tsx",
+          "code": "<div className=\"py-2\">\n<div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6\">\n{technologies.map((technology: Tech, ind: number) => {\nreturn ("
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\TechnologySection.tsx",
+          "code": "<section className=\"-mt-10 md:py-5\">\n<div className=\"container mx-auto px-6\">\n<div className=\"mb-2 md:mb-8\">"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\YourStack.tsx",
+          "code": "<div className=\"bg-white rounded-2xl shadow-md p-6 border border-gray-100\">\n<div className=\"mb-4\">\n<h3 className=\"text-lg font-semibold text-gray-900\">Your Stack</h3>\n<p className=\"text-sm text-gray-400 mt-1\">No technologies added yet.</p>"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\home\\Hero.tsx",
+          "code": "<section className=\"bg-black w-full px-5 py-6 \">\n<div\nclassName=\"w-full border border-zinc-800 rounded-3xl p-10 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-8\"\nstyle={{ backgroundColor: \"#15171D\" }}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\home\\WorkoutCard.tsx",
+          "code": "href={`/workout/${workout.id}`} className=\"group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900\">\n<div className=\"relative h-64 overflow-hidden rounded-2xl\">\n<Image\nsrc={workout.image}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\home\\WorkoutLibrary.tsx",
+          "code": "<section id=\"library\" className=\"bg-black px-5 py-16\">\n<h2 className=\"text-white text-4xl font-bold\">\nTHE LIBRARY\n</h2>"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\myPlan\\PlanWorkoutCard.tsx",
+          "code": "<div className=\"border border-zinc-800 rounded-2xl p-5 mt-6 bg-[#12141c] flex flex-wrap gap-4\">\n<div className=\"relative w-full h-64 sm:w-32 sm:h-24 shrink-0 overflow-hidden rounded-xl\">\n<Image\nsrc={workout.image}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Badge.tsx",
+          "code": "<span className=\"bg-lime-400 text-black font-bold uppercase px-4 py-1.5 rounded-full text-xs\">\n{children}\n</span>\n);"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Button-1.tsx",
+          "code": "className={`bg-lime-400 text-black font-semibold px-5 py-3 rounded-2xl flex items-center gap-2 hover:bg-lime-500 active:scale-95 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${className}`}\n>\n{children}\n</button>"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Button-2.tsx",
+          "code": "className={`border border-zinc-700 text-white px-5 py-3 rounded-2xl font-medium flex items-center justify-center gap-2.5 hover:bg-zinc-900 active:scale-95 transition-all cursor-pointer ${className}`}>\n{children}\n</button>\n);"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Footer.tsx",
+          "code": "<footer className=\"bg-black text-white border-t border-zinc-800 px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 md:gap-4\">\n<Link href=\"/\" className=\"flex items-center gap-3\">\n<Image src={logo} alt=\"FitLog logo\" className=\"w-4 md:w-6\" />\n<span className=\"font-bold tracking-wider text-sm md:text-base\">FITLOG</span>"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Navbar.tsx",
+          "code": "<div className=\"navbar relative bg-black text-white px-3 md:px-6 shadow-sm border-b border-zinc-800\">\n<div className=\"navbar-start gap-1.5\">\n<div className=\"dropdown\">\n<div"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\workoutDetails\\AddToPlanButton.tsx",
+          "code": "disabled={planWorkouts.length >= 5} className=\"mx-auto lg:mx-0\"> <Image src={addicon} alt=\"Add\" width={18} height={18} /> Add to today's plan\n</Button>\n);\n};"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\workoutDetails\\SaveButton.tsx",
+          "code": "<Button2 onClick={handleSave} className=\"w-52 mx-auto lg:mx-0\">\n<Image\nsrc={SaveIcon}\nalt=\"Save\""
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\my-plan\\page.tsx",
+          "code": "<main className=\"px-5 pt-11 pb-8\">\n<div className=\"border border-zinc-800 rounded-2xl p-5 bg-[#12141c]\">\n<div className=\"flex flex-col sm:flex-row\">\n<div className=\"w-full sm:w-1/3 px-4 py-4 -mt-4 sm:mt-0\">"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\workout\\[id]\\page.tsx",
+          "code": "<main className=\"bg-black min-h-screen px-5 py-16\">\n<div className=\"max-w-350 mx-auto\">\n<div className=\"grid grid-cols-1 lg:grid-cols-2 gap-15\">"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\layout.tsx",
+          "code": "className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}\n>\n<body className=\"min-h-full flex flex-col\">\n<WorkoutProvider>"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\loading.tsx",
+          "code": "<main className=\"bg-black min-h-screen flex items-center justify-center\">\n<button className=\"btn bg-zinc-900 text-white border-zinc-800\">\n<span className=\"loading loading-spinner\"></span>\nLoading workouts\u2026"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\not-found.tsx",
+          "code": "<main className=\"bg-black min-h-screen flex flex-col items-center justify-center text-center px-5\">\n<p className=\"text-lime-400 text-lg font-bold tracking-widest\">\n404\n</p>"
+        }
+      ]
+    },
+    "fetch": {
+      "file_count": 12,
+      "projects": [
+        "b14-book-vibe",
+        "bangla-news-24",
+        "Dev-Stack",
+        "Fitlog"
+      ],
+      "examples": [
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\homepage\\Books.tsx",
+          "code": "const response = await fetch(\n`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,\n);\nconst data = await response.json();"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\books\\page.tsx",
+          "code": "const response = await fetch(\n`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,\n);\nconst data = await response.json();"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\books\\[id]\\page.tsx",
+          "code": "const response = await fetch(\n`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,\n);\nconst data = await response.json();"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\Marquee.tsx",
+          "code": "const res = await fetch(\"https://news-api-v2.vercel.app/api/news?limit=10\")\nconst data = await res.json()\nconst headlines:Headlines[] = data.data\nreturn ("
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\MostRead.tsx",
+          "code": "const res = await fetch(\"https://news-api-v2.vercel.app/api/news/most-read\");\nconst data = await res.json();\nconst news: MostReadNews[] = data.data;"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\NavLinks.tsx",
+          "code": "const res = await fetch(\"https://news-api-v2.vercel.app/api/categories\");\nconst data = await res.json();\nconst navs:Navs[] = data.data;\nconst filteredNavs = navs.filter((n) => n.scrapable);"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\page.tsx",
+          "code": "const res = await fetch(\"https://news-api-v2.vercel.app/api/news/sections\");\nconst data = await res.json();\nconst sections = data.data;\nconst mainNews = sections[0].articles;"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\category\\[categoryId]\\page.tsx",
+          "code": "const res = await fetch(\n`https://news-api-v2.vercel.app/api/category/${categoryId}`,\n);"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\news\\[newsId]\\page.tsx",
+          "code": "const res = await fetch(`https://news-api-v2.vercel.app/api/article/${newsId}`)\nconst data = await res.json()"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\TechnologySection.tsx",
+          "code": "const res = await fetch(\"/technologies.json\");\nconst data = await res.json();\nreturn data;\n};"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\home\\WorkoutLibrary.tsx",
+          "code": "const response = await fetch(\n\"https://api.api-store.workers.dev/api/fitlog\"\n);"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\workout\\[id]\\page.tsx",
+          "code": "const response = await fetch(\n\"https://api.api-store.workers.dev/api/fitlog\"\n);"
+        }
+      ]
+    },
+    "map": {
+      "file_count": 19,
+      "projects": [
+        "b14-book-vibe",
+        "bangla-news-24",
+        "Dev-Stack",
+        "Fitlog"
+      ],
+      "examples": [
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\homepage\\Books.tsx",
+          "code": "{booksData.slice(0, 9).map((book: IBook, ind: number) => {\nreturn <BookCard key={ind} book={book} />;\n})}\n</div>"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\shared\\BookCard.tsx",
+          "code": "{book.tags.map((tag) => (\n<span\nkey={tag}\nclassName=\"rounded-md bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-600\""
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\shared\\ListedBooksCard.tsx",
+          "code": "{book.tags.map((tag) => (\n<span key={tag} className=\"badge badge-primary badge-outline\">\n{\" \"}\n#{tag}{\" \"}"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\books\\page.tsx",
+          "code": "{booksData.map((book: IBook, ind: number) => {\nreturn <BookCard key={ind} book={book} />;\n})}\n</div>"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\books\\[id]\\page.tsx",
+          "code": "{book.tags.map((tag) => (\n<span key={tag} className=\"badge badge-ghost\">\n#{tag}\n</span>"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\listed-books\\page.tsx",
+          "code": "sortedReadBooks.map((book: IBook) => {\nreturn <ListedBooksCard key={book.bookId} book={book} />;\n})\n) : ("
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\read-books\\page.tsx",
+          "code": "const data = readBooks.map((book: IBook, index: number) => {\nreturn {\nname: book.bookName,\nuv: book.totalPages,"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\MainNews.tsx",
+          "code": "{otherNews.slice(0, 4).map((on) => (\n<div\nclassName=\"card bg-base-100 border border-gray-300 p-5\"\nkey={on.id}"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\Marquee.tsx",
+          "code": "{headlines.map(h => <Link className=\"hover:underline\" href={`/news/${h.id}`} key={h.id}>\n<span>{h.title}</span>\n<span className=\"mx-5\">\u2022</span>\n</Link>)}"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\MostRead.tsx",
+          "code": "{news.map((n, i) => (\n<div className=\"flex gap-2 items-center\" key={n.id}>\n<p className=\"text-2xl font-bold text-red-600\">{i + 1}</p>{\" \"}\n<h2>{n.title}</h2>"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\NavLinks.tsx",
+          "code": "{filteredNavs.map((n, i) => (\n<Link key={i} href={`/category/${n.slug}`}>\n{n.title}\n</Link>"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\page.tsx",
+          "code": "{otherSections.map((os) => (\n<div\nclassName=\"\"\nkey={os.curationId}"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\category\\[categoryId]\\page.tsx",
+          "code": "{categoryNews.map((news) => (\n<NewsCard key={news.id} news={news} />\n))}\n</div>"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\TechnologyGrid.tsx",
+          "code": "{technologies.map((technology: Tech, ind: number) => {\nreturn (\n<TechnologyCard\nkey={ind}"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\YourStack.tsx",
+          "code": "{selectedTechnologies.map((technology: Tech, ind: number) => {\nreturn (\n<StackItem\nkey={ind}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\home\\WorkoutCard.tsx",
+          "code": "{workout.muscleGroups.map((muscle) => (\n<Badge key={muscle}>{muscle}</Badge>\n))}\n</div>"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\home\\WorkoutLibrary.tsx",
+          "code": "{workouts.map((workout) => (\n<WorkoutCard key={workout.id} workout={workout} />\n))}\n</div>"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\my-plan\\page.tsx",
+          "code": "{sortedWorkouts.map((workout) => (\n<PlanWorkoutCard key={workout.id} workout={workout} isSaved={activeTab === \"saved\"} />\n))}\n</div>"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\workout\\[id]\\page.tsx",
+          "code": "{workout.muscleGroups.map((muscle) => (\n<Badge key={muscle}>{muscle}</Badge>\n))}\n</div>"
+        }
+      ]
+    },
+    "async/await": {
+      "file_count": 16,
+      "projects": [
+        "b14-book-vibe",
+        "bangla-news-24",
+        "Dev-Stack",
+        "Fitlog"
+      ],
+      "examples": [
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\homepage\\Books.tsx",
+          "code": "const getBooks = async () => {\ntry{\nconst response = await fetch("
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\books\\page.tsx",
+          "code": "const getBooks = async () => {\ntry{\nconst response = await fetch("
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\books\\[id]\\page.tsx",
+          "code": "const getBooks = async () => {\ntry {\nconst response = await fetch(\n`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\Marquee.tsx",
+          "code": "const Marquee = async () => {\nconst res = await fetch(\"https://news-api-v2.vercel.app/api/news?limit=10\")\nconst data = await res.json()\nconst headlines:Headlines[] = data.data"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\MostRead.tsx",
+          "code": "const MostRead = async () => {\nconst res = await fetch(\"https://news-api-v2.vercel.app/api/news/most-read\");\nconst data = await res.json();"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\NavLinks.tsx",
+          "code": "const NavLinks = async () => {\nconst res = await fetch(\"https://news-api-v2.vercel.app/api/categories\");\nconst data = await res.json();\nconst navs:Navs[] = data.data;"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\UserInfo.tsx",
+          "code": "const handleSignout = async () => {\nawait authClient.signOut();\n};"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\page.tsx",
+          "code": "export default async function Home() {\nconst res = await fetch(\"https://news-api-v2.vercel.app/api/news/sections\");\nconst data = await res.json();\nconst sections = data.data;"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\category\\[categoryId]\\page.tsx",
+          "code": "const CategoryNews = async ({ params }: { params: { categoryId: string } }) => {\nconst { categoryId } = await params;\nconst res = await fetch("
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\profile\\page.tsx",
+          "code": "const handleUpdateProfile = async (e:React.SubmitEvent<HTMLElement>) => {\ne.preventDefault()\nconst formData = new FormData(e.target);\nconst newUserData = Object.fromEntries(formData.entries()) as {name: string, image:string }"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\signin\\page.tsx",
+          "code": "const onSubmit = async (e: React.SubmitEvent<HTMLElement>) => {\ne.preventDefault();\nconst formData = new FormData(e.target);"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\signup\\page.tsx",
+          "code": "const onSubmit = async (e: React.SubmitEvent<HTMLElement>) => {\ne.preventDefault();\nconst formData = new FormData(e.target);"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\proxy.ts",
+          "code": "export async function proxy(request: NextRequest) {\nconst session = await auth.api.getSession({\nheaders: await headers(),\n});"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\TechnologySection.tsx",
+          "code": "const technologyFetch = async (): Promise<Tech[]> => {\nconst res = await fetch(\"/technologies.json\");\nconst data = await res.json();\nreturn data;"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\home\\WorkoutLibrary.tsx",
+          "code": "const WorkoutLibrary = async () => {\nconst response = await fetch(\n\"https://api.api-store.workers.dev/api/fitlog\"\n);"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\workout\\[id]\\page.tsx",
+          "code": "const getWorkouts = async () => {\ntry {\nconst response = await fetch(\n\"https://api.api-store.workers.dev/api/fitlog\""
+        }
+      ]
+    },
+    "TypeScript interface": {
+      "file_count": 26,
+      "projects": [
+        "b14-book-vibe",
+        "bangla-news-24",
+        "Dev-Stack",
+        "Fitlog"
+      ],
+      "examples": [
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\shared\\BookCard.tsx",
+          "code": "interface IBookCardProps {\nbook: IBook;\n}"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\components\\shared\\ListedBooksCard.tsx",
+          "code": "interface IListedBooksCardProps {\nbook: IBook;\n}"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\app\\books\\[id]\\page.tsx",
+          "code": "interface IBookDetailsPageProps {\nparams: Promise<{\nid: string;\n}>;"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\context\\BooksContext.tsx",
+          "code": "interface IBooksContext {\nreadBooks: IBook[];\nsetReadBooks: React.Dispatch<React.SetStateAction<IBook[]>>;\nwishlist: IBook[];"
+        },
+        {
+          "project": "b14-book-vibe",
+          "file": "references\\b14-book-vibe\\src\\types\\books.type.ts",
+          "code": "export interface IBook {\nbookId: number,\nbookName: string,\nauthor: string,"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\MainNews.tsx",
+          "code": "interface News {\nid: string;\ntitle: string;\ndescription: string;"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\Marquee.tsx",
+          "code": "interface Headlines {\nid: string\ntitle: string\n}"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\MostRead.tsx",
+          "code": "interface MostReadNews {\nid: string;\ntitle: string;\n}"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\NavLinks.tsx",
+          "code": "interface Navs {\nslug: string\ntitle: string\ntopicId: string | null"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\NewsCard.tsx",
+          "code": "interface News {\nid: string;\ntitle: string;\ndescription: string;"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\page.tsx",
+          "code": "interface IOtherSection {\ncurationId: string;\ntitle: string;\narticles: {"
+        },
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\category\\[categoryId]\\page.tsx",
+          "code": "interface News {\nid: string;\ntitle: string;\ndescription: string;"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\StackItem.tsx",
+          "code": "interface StackItemProps {\ntechnology: Tech\nselectedTechnologies: Tech[]\nsetSelectedTechnologies: Dispatch<SetStateAction<Tech[]>>"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\TechnologyCard.tsx",
+          "code": "interface TechnologyCardProps {\ntechnology: Tech\nselectedTechnologies: Tech[]\nsetSelectedTechnologies: Dispatch<SetStateAction<Tech[]>>"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\TechnologyGrid.tsx",
+          "code": "interface TechnologyGridProps {\ntechnologyPromise: Promise<Tech[]>\nselectedTechnologies: Tech[]\nsetSelectedTechnologies: Dispatch<SetStateAction<Tech[]>>"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\YourStack.tsx",
+          "code": "interface YourStackProps {\nselectedTechnologies: Tech[]\nsetSelectedTechnologies: Dispatch<SetStateAction<Tech[]>>\n}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\home\\WorkoutCard.tsx",
+          "code": "interface IWorkoutCardProps {\nworkout: Workout;\n}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\myPlan\\PlanWorkoutCard.tsx",
+          "code": "interface PlanWorkoutCardProps {\nworkout: Workout;\nisSaved: boolean;\n}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Badge.tsx",
+          "code": "interface BadgeProps {\nchildren: React.ReactNode;\n}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Button-1.tsx",
+          "code": "interface ButtonProps {\nchildren: React.ReactNode;\nonClick?: () => void;\nclassName?: string;"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Button-2.tsx",
+          "code": "interface ButtonProps {\nchildren: React.ReactNode;\nonClick?: () => void;\nclassName?: string;"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\workoutDetails\\AddToPlanButton.tsx",
+          "code": "interface AddToPlanButtonProps {\nworkout: Workout;\n}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\workoutDetails\\SaveButton.tsx",
+          "code": "interface SaveButtonProps {\nworkout: Workout;\n}"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\workout\\[id]\\page.tsx",
+          "code": "interface WorkoutDetailsProps {\nparams: Promise<{\nid: string;\n}>;"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\context\\WorkoutContext.tsx",
+          "code": "interface IWorkoutContext {\nplanWorkouts: Workout[];\nsetPlanWorkouts: React.Dispatch<React.SetStateAction<Workout[]>>;\nsavedWorkouts: Workout[];"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\types\\Workout.ts",
+          "code": "export interface Workout {\nid: number;\nname: string;\nimage: string;"
+        }
+      ]
+    },
+    "useState": {
+      "file_count": 7,
+      "projects": [
+        "b14-book-vibe",
+        "bangla-news-24",
+        "Dev-Stack",
+        "Fitlog"
+      ],
+      "examples": [
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\app\\profile\\page.tsx",
+          "code": "const [show, setShow] = useState(false)\nconst handleUpdateProfile = async (e:React.SubmitEvent<HTMLElement>) => {"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\Navbar\\Navbar.tsx",
+          "code": "const [activeMenu, setActiveMenu] = useState(\"Home\")\nreturn (\n<nav className=\"sticky top-0 z-50 border-b border-[#F1F5F9] bg-white\">"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\TechnologySection.tsx",
+          "code": "const [technologyPromise] = useState(() => technologyFetch())\nreturn (\n<section className=\"-mt-10 md:py-5\">\n<div className=\"container mx-auto px-6\">"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\app\\my-plan\\page.tsx",
+          "code": "const [activeTab, setActiveTab] = useState(\ntab === \"saved\" ? \"saved\" : \"plan\"\n);\nconst [sortBy, setSortBy] = useState(\"duration\");"
+        }
+      ]
+    },
+    "filter": {
+      "file_count": 3,
+      "projects": [
+        "bangla-news-24",
+        "Dev-Stack",
+        "Fitlog"
+      ],
+      "examples": [
+        {
+          "project": "bangla-news-24",
+          "file": "references\\bangla-news-24\\src\\components\\NavLinks.tsx",
+          "code": "const filteredNavs = navs.filter((n) => n.scrapable);\nreturn (\n<div className=\"flex gap-5 justify-center mt-5\">\n<Link href={\"/\"}>\u09b9\u09cb\u09ae</Link>"
+        },
+        {
+          "project": "Dev-Stack",
+          "file": "references\\Dev-Stack\\src\\components\\TechnologySection\\StackItem.tsx",
+          "code": "const remainingTechnologies = selectedTechnologies.filter(\n(item) => item.id !== technology.id\n)"
+        },
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\myPlan\\PlanWorkoutCard.tsx",
+          "code": "planWorkouts.filter((item) => item.id !== workout.id)\n);\ntoast.success(\"Workout marked as done\");\n};"
+        }
+      ]
+    },
+    "usePathname": {
+      "file_count": 1,
+      "projects": [
+        "Fitlog"
+      ],
+      "examples": [
+        {
+          "project": "Fitlog",
+          "file": "references\\Fitlog\\src\\components\\shared\\Navbar.tsx",
+          "code": "const pathname = usePathname();\nconst isWorkoutsActive =\npathname === \"/\" || pathname.startsWith(\"/workout\");"
+        }
+      ]
+    }
+  }
+}
